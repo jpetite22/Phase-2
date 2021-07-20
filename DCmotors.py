@@ -3,7 +3,6 @@ import blynklib
 
 BLYNK_AUTH = '7WmNA1wnN7NFTvOMm1yNm7TOywXHySUr'
 
-# initialize blynk
 blynk = blynklib.Blynk(BLYNK_AUTH)
 
 motorR1 = 19
@@ -18,7 +17,6 @@ GPIO.setup(motorR2,GPIO.OUT)
 GPIO.setup(motorL1,GPIO.OUT)
 GPIO.setup(motorL2,GPIO.OUT)
 
-# register handler for virtual pin V0 write event
 @blynk.handle_event('write V1')
 def write_virtual_pin_handler(pin, value):
     switch = (format(value[0]))
