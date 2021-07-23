@@ -5,9 +5,9 @@ import time
 BLYNK_AUTH = '7WmNA1wnN7NFTvOMm1yNm7TOywXHySUr'
 blynk = blynklib.Blynk(BLYNK_AUTH)
 
-GPIO.setmode(GPIO.BCM)
-
 servo = 12
+
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo, GPIO.OUT)
 ServoPWM = GPIO.PWM(servo,50)
 ServoPWM.start(0)
