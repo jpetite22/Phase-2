@@ -53,13 +53,13 @@ def distance():
 
 @blynk.handle_event('write V1')
 def write_virtual_pin_handler(pin, value):
-    switch = (format(value[0]))
-    if switch == "0":
+    motorForward = (format(value[0]))
+    if motorForward == "0":
         GPIO.output(motorR1, 0)
         GPIO.output(motorR2, 0)
         GPIO.output(motorL1, 0)
         GPIO.output(motorL2, 0)
-    elif switch == "1":
+    elif motorForward == "1":
         GPIO.output(motorR1, 1)
         GPIO.output(motorR2, 0)
         GPIO.output(motorL1, 1)
